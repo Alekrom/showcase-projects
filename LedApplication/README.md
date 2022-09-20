@@ -1,7 +1,7 @@
 ## Content
 
-LedMobileApp contains the anrdoid app.
+LedMobileApp contains the android app.
 
-ledControler is application writtin for the arduino.
+ledControler is the application written for the arduino.
 
 Bluetooth protocol briefly describes the communication between the two apps.
