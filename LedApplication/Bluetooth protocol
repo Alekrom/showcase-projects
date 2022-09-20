@@ -1,0 +1,39 @@
+Bluetooth protocol:
+
+Communication:
+
+1. Communication starts with the mobile app sending an x
+2. arduino answers with an x
+	- This makes sure arduino is listening (necessary due to led.show() disabling interrupts on arduino)
+3. Command is send by app to arduino
+
+
+Commands:
+
+All commands are terminated with "!"
+
+$ = value	
+/c = color, e.g. "r", "b"
+	Note: "m" = master
+
+/b = boolean: 0 | 1 
+
+**************************************
+
+color: "cr$g$b$w$"
+
+dim:
+
+dimSpeed = "ds/c$"
+
+dimChecked = "dc/c/b"
+
+dimKeepColors = "dk/b"
+
+strobo:
+
+type: /t: + -> onInterval, - -> offInterval, o -> offset
+
+stroboChecked: "sc/c/b"
+
+stroboValues: sv/c/t$

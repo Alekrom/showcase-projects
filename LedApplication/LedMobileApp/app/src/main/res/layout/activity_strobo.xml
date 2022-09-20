@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+            android:id='@+id/stroboRedOn'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboGreenOn"
+            app:layout_constraintEnd_toStartOf="@+id/stroboRedOff"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id='@+id/stroboRedOnText'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Red On "
+            app:layout_constraintBottom_toTopOf="@+id/stroboRedOn"
+            app:layout_constraintStart_toStartOf="@+id/stroboRedOn" />
+
+    <EditText
+            android:id='@+id/stroboRedOff'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboGreenOff"
+            app:layout_constraintEnd_toStartOf="@+id/stroboRedOffset"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboRedOn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id='@+id/stroboRedOffText'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Red Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboRedOff"
+            app:layout_constraintStart_toStartOf="@+id/stroboRedOff" />
+
+    <Switch
+            android:id="@+id/stroboRedSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            app:layout_constraintBottom_toTopOf="@+id/stroboGreenSwitch"
+            app:layout_constraintEnd_toStartOf="@+id/stroboHGl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+            android:id='@+id/stroboRedOffset'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboGreenOffset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboRedOff"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id='@+id/stroboRedOffsetText'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Red Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboRedOffset"
+            app:layout_constraintStart_toStartOf="@+id/stroboRedOffset" />
+
+    <EditText
+            android:id="@+id/stroboGreenOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboBlueOff"
+            app:layout_constraintEnd_toStartOf="@+id/stroboGreenOffset"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboGreenOn"
+            app:layout_constraintTop_toBottomOf="@+id/stroboRedOff" />
+
+    <EditText
+            android:id="@+id/stroboGreenOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboBlueOffset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboGreenOff"
+            app:layout_constraintTop_toBottomOf="@+id/stroboRedOffset" />
+
+    <TextView
+            android:id="@+id/stroboGreenOffText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Green Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboGreenOff"
+            app:layout_constraintStart_toStartOf="@+id/stroboGreenOff" />
+
+    <Switch
+            android:id="@+id/stroboGreenSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            app:layout_constraintBottom_toTopOf="@+id/stroboBlueSwitch"
+            app:layout_constraintEnd_toStartOf="@+id/stroboHGl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl2"
+            app:layout_constraintTop_toBottomOf="@+id/stroboRedSwitch" />
+
+    <EditText
+            android:id="@+id/stroboGreenOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboBlueOn"
+            app:layout_constraintEnd_toStartOf="@+id/stroboGreenOff"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl"
+            app:layout_constraintTop_toBottomOf="@+id/stroboRedOn" />
+
+    <TextView
+            android:id="@+id/stroboGreenOffsetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Green Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboGreenOffset"
+            app:layout_constraintStart_toStartOf="@+id/stroboGreenOffset" />
+
+    <TextView
+            android:id="@+id/stroboGreenOnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Green On "
+            app:layout_constraintBottom_toTopOf="@+id/stroboGreenOn"
+            app:layout_constraintStart_toStartOf="@+id/stroboGreenOn" />
+
+    <EditText
+            android:id="@+id/stroboBlueOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboWhiteOff"
+            app:layout_constraintEnd_toStartOf="@+id/stroboBlueOffset"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboBlueOn"
+            app:layout_constraintTop_toBottomOf="@+id/stroboGreenOff" />
+
+    <EditText
+            android:id="@+id/stroboBlueOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboWhiteOffset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboBlueOff"
+            app:layout_constraintTop_toBottomOf="@+id/stroboGreenOffset" />
+
+    <TextView
+            android:id="@+id/stroboBlueOffText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Blue Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboBlueOff"
+            app:layout_constraintStart_toStartOf="@+id/stroboBlueOff" />
+
+    <Switch
+            android:id="@+id/stroboBlueSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            app:layout_constraintBottom_toTopOf="@+id/stroboWhiteSwitch"
+            app:layout_constraintEnd_toStartOf="@+id/stroboHGl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl2"
+            app:layout_constraintTop_toBottomOf="@+id/stroboGreenSwitch" />
+
+    <EditText
+            android:id="@+id/stroboBlueOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboWhiteOn"
+            app:layout_constraintEnd_toStartOf="@+id/stroboBlueOff"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl"
+            app:layout_constraintTop_toBottomOf="@+id/stroboGreenOn" />
+
+    <TextView
+            android:id="@+id/stroboBlueOffsetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Blue Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboBlueOffset"
+            app:layout_constraintStart_toStartOf="@+id/stroboBlueOffset" />
+
+    <TextView
+            android:id="@+id/stroboBlueOnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Blue On "
+            app:layout_constraintBottom_toTopOf="@+id/stroboBlueOn"
+            app:layout_constraintStart_toStartOf="@+id/stroboBlueOn" />
+
+    <EditText
+            android:id="@+id/stroboWhiteOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboMasterOff"
+            app:layout_constraintEnd_toStartOf="@+id/stroboWhiteOffset"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboWhiteOn"
+            app:layout_constraintTop_toBottomOf="@+id/stroboBlueOff" />
+
+    <EditText
+            android:id="@+id/stroboWhiteOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboMasterOffset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboWhiteOff"
+            app:layout_constraintTop_toBottomOf="@+id/stroboBlueOffset" />
+
+    <TextView
+            android:id="@+id/stroboWhiteOffText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="White Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboWhiteOff"
+            app:layout_constraintStart_toStartOf="@+id/stroboWhiteOff" />
+
+    <Switch
+            android:id="@+id/stroboWhiteSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="White"
+            app:layout_constraintBottom_toTopOf="@+id/stroboMasterSwitch"
+            app:layout_constraintEnd_toStartOf="@+id/stroboHGl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl2"
+            app:layout_constraintTop_toBottomOf="@+id/stroboBlueSwitch" />
+
+    <EditText
+            android:id="@+id/stroboWhiteOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboMasterOn"
+            app:layout_constraintEnd_toStartOf="@+id/stroboWhiteOff"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl"
+            app:layout_constraintTop_toBottomOf="@+id/stroboBlueOn" />
+
+    <TextView
+            android:id="@+id/stroboWhiteOffsetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="White Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboWhiteOffset"
+            app:layout_constraintStart_toStartOf="@+id/stroboWhiteOffset" />
+
+    <TextView
+            android:id="@+id/stroboWhiteOnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="White On "
+            app:layout_constraintBottom_toTopOf="@+id/stroboWhiteOn"
+            app:layout_constraintStart_toStartOf="@+id/stroboWhiteOn" />
+
+    <EditText
+            android:id="@+id/stroboMasterOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboVGlmid"
+            app:layout_constraintEnd_toStartOf="@+id/stroboMasterOff"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl"
+            app:layout_constraintTop_toBottomOf="@+id/stroboWhiteOn" />
+
+    <TextView
+            android:id="@+id/stroboMasterOffsetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="All Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboMasterOffset"
+            app:layout_constraintStart_toStartOf="@+id/stroboMasterOffset" />
+
+    <EditText
+            android:id="@+id/stroboMasterOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboVGlmid"
+            app:layout_constraintEnd_toStartOf="@+id/stroboMasterOffset"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboMasterOn"
+            app:layout_constraintTop_toBottomOf="@+id/stroboWhiteOff" />
+
+    <EditText
+            android:id="@+id/stroboMasterOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stroboVGlmid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stroboMasterOff"
+            app:layout_constraintTop_toBottomOf="@+id/stroboWhiteOffset" />
+
+    <TextView
+            android:id="@+id/stroboMasterOnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="All On "
+            app:layout_constraintBottom_toTopOf="@+id/stroboMasterOn"
+            app:layout_constraintStart_toStartOf="@+id/stroboMasterOn" />
+
+    <Switch
+            android:id="@+id/stroboMasterSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:enabled="true"
+            android:text="All"
+            app:layout_constraintBottom_toTopOf="@+id/stroboVGlmid"
+            app:layout_constraintEnd_toStartOf="@+id/stroboHGl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl2"
+            app:layout_constraintTop_toBottomOf="@+id/stroboWhiteSwitch" />
+
+    <TextView
+            android:id="@+id/stroboMasterOffText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="All Off "
+            app:layout_constraintBottom_toTopOf="@+id/stroboMasterOff"
+            app:layout_constraintStart_toStartOf="@+id/stroboMasterOff" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/stroboVGlmid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/stroboHGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/stroboHGl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+    <Button
+            android:id="@+id/stroboBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/stroboHGl"
+            app:layout_constraintStart_toStartOf="@+id/stroboHGl2"
+            app:layout_constraintTop_toTopOf="@+id/stroboVGlmid" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

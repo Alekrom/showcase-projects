@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LedConfigActivity">
+
+    <Button
+            android:id="@+id/colorPickBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Color"
+            app:layout_constraintBottom_toTopOf="@+id/ledVGlmid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+            android:id='@+id/whiteOnlySwitch'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="White Only:  "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lockWhiteSwitch"
+            app:layout_constraintTop_toTopOf="@+id/ledVGlmid" />
+
+    <Switch
+            android:id='@+id/lockWhiteSwitch'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Lock White: "
+            app:layout_constraintEnd_toStartOf="@+id/whiteOnlySwitch"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ledVGlmid" />
+
+    <EditText
+            android:id='@+id/txtInputRed'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="3"
+            app:layout_constraintBottom_toTopOf="@+id/ledVGlmid"
+            app:layout_constraintEnd_toStartOf="@id/txtInputGreen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/colorPickBtn" />
+
+    <TextView
+            android:id='@+id/txtLabelRed'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Red"
+            app:layout_constraintEnd_toStartOf="@id/txtInputRed"
+            app:layout_constraintStart_toStartOf="@id/txtInputRed"
+            app:layout_constraintTop_toTopOf="@id/txtInputRed" />
+
+    <EditText
+            android:id='@+id/txtInputGreen'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/ledVGlmid"
+            app:layout_constraintEnd_toStartOf="@id/txtInputBlue"
+            app:layout_constraintStart_toEndOf="@id/txtInputRed"
+            app:layout_constraintTop_toBottomOf="@id/colorPickBtn" />
+
+    <TextView
+            android:id='@+id/txtLabelGreen'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Green"
+            app:layout_constraintEnd_toStartOf="@id/txtInputGreen"
+            app:layout_constraintStart_toStartOf="@id/txtInputGreen"
+            app:layout_constraintTop_toTopOf="@id/txtInputGreen" />
+
+    <EditText
+            android:id='@+id/txtInputBlue'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/ledVGlmid"
+            app:layout_constraintEnd_toStartOf="@id/txtInputWhite"
+            app:layout_constraintStart_toEndOf="@id/txtInputGreen"
+            app:layout_constraintTop_toBottomOf="@id/colorPickBtn" />
+
+    <TextView
+            android:id='@+id/txtLabelBlue'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Blue"
+            app:layout_constraintEnd_toStartOf="@id/txtInputBlue"
+            app:layout_constraintStart_toStartOf="@id/txtInputBlue"
+            app:layout_constraintTop_toTopOf="@id/txtInputBlue" />
+
+    <EditText
+            android:id='@+id/txtInputWhite'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:maxLength="3"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/ledVGlmid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtInputBlue"
+            app:layout_constraintTop_toBottomOf="@id/colorPickBtn" />
+
+    <TextView
+            android:id='@+id/txtLabelWhite'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="White"
+            app:layout_constraintEnd_toStartOf="@id/txtInputWhite"
+            app:layout_constraintStart_toStartOf="@id/txtInputWhite"
+            app:layout_constraintTop_toTopOf="@id/txtInputWhite" />
+
+    <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ledVGlbot" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ledVGlmid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ledVGlbot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+    <Button
+            android:id="@+id/stroboFeatureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strobo"
+            app:layout_constraintBottom_toBottomOf="@+id/dimFeatureBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dimFeatureBtn"
+            app:layout_constraintTop_toTopOf="@+id/dimFeatureBtn" />
+
+    <Button
+            android:id="@+id/dimFeatureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Dim "
+            app:layout_constraintBottom_toTopOf="@+id/ledVGlbot"
+            app:layout_constraintEnd_toStartOf="@+id/stroboFeatureBtn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

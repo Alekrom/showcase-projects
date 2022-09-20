@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <SeekBar
+            android:id="@+id/dimRedBar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/dimGreenBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dimSwitchRed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+            android:id="@+id/dimRedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red Dim Speed"
+            app:layout_constraintBottom_toTopOf="@+id/dimRedBar"
+            app:layout_constraintStart_toStartOf="@+id/dimRedBar" />
+
+    <SeekBar
+            android:id="@+id/dimGreenBar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/dimBlueBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dimRedBar" />
+
+    <TextView
+            android:id="@+id/dimGreenLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green Dim Speed"
+            app:layout_constraintBottom_toTopOf="@+id/dimGreenBar"
+            app:layout_constraintStart_toStartOf="@+id/dimGreenBar" />
+
+    <SeekBar
+            android:id="@+id/dimBlueBar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/dimWhiteBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dimGreenBar"/>
+
+    <TextView
+            android:id="@+id/dimBlueLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue Dim Speed"
+            app:layout_constraintBottom_toTopOf="@+id/dimBlueBar"
+            app:layout_constraintStart_toStartOf="@+id/dimBlueBar" />
+
+    <SeekBar
+            android:id="@+id/dimWhiteBar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/dimVertGl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dimBlueBar" />
+
+    <TextView
+            android:id="@+id/dimWhiteLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="White Dim Speed"
+            app:layout_constraintBottom_toTopOf="@+id/dimWhiteBar"
+            app:layout_constraintStart_toStartOf="@+id/dimWhiteBar" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/dimVertGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.66" />
+
+    <TextView
+            android:id="@+id/dimMasterBarLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Master Dim Speed"
+            app:layout_constraintBottom_toTopOf="@+id/dimMasterBar"
+            app:layout_constraintStart_toStartOf="@+id/dimMasterBar" />
+
+    <Switch
+            android:id="@+id/dimMasterSpeedSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            app:layout_constraintBottom_toBottomOf="@+id/dimMasterBar"
+            app:layout_constraintEnd_toStartOf="@+id/dimMasterBar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dimMasterBar" />
+
+    <SeekBar
+            android:id="@+id/dimMasterBar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dimMasterSpeedSwitch"
+            app:layout_constraintTop_toBottomOf="@id/dimVertGl" />
+
+    <Switch
+            android:id="@+id/dimKeepColorsSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="98dp"
+            android:text="keep Colors"
+            app:layout_constraintBottom_toTopOf="@+id/dimBackBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dimMasterBar"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="keep Colors" />
+
+    <Switch
+            android:id="@+id/dimSwitchRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dim Red"
+            app:layout_constraintBottom_toBottomOf="@+id/dimRedBar"
+            app:layout_constraintEnd_toStartOf="@+id/dimRedBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dimRedBar" />
+
+    <Switch
+            android:id="@+id/dimSwitchGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dim Green"
+            app:layout_constraintBottom_toBottomOf="@+id/dimGreenBar"
+            app:layout_constraintEnd_toStartOf="@+id/dimGreenBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dimGreenBar" />
+
+    <Switch
+            android:id="@+id/dimSwitchBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dim Blue"
+            app:layout_constraintBottom_toBottomOf="@+id/dimBlueBar"
+            app:layout_constraintEnd_toStartOf="@+id/dimBlueBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dimBlueBar" />
+
+    <Switch
+            android:id="@+id/dimSwitchWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dim White"
+            app:layout_constraintBottom_toBottomOf="@+id/dimWhiteBar"
+            app:layout_constraintEnd_toStartOf="@+id/dimWhiteBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dimWhiteBar" />
+
+    <Button
+            android:id="@+id/dimBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
