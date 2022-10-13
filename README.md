@@ -1,6 +1,5 @@
 # showcase-projects
-Showcase projects for application at Wunderpen
-
+Coding examples of Alexander Kromer
 ### Content
 
 The repository contains two projects. 
